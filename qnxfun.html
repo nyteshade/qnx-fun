@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>QNX Fun</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="qnxfun.css">
+    <script src="qnxfun.js"></script>
+  </head>
+  <body>
+    <div id="target"></div>
+
+    <script type="application/javascript">
+      var myItems = [
+        { image: 'floppy.png', label: 'Retro Gaming' },
+        { image: 'camera.png', label: 'Video Chat with Someone' },
+        { image: 'devtools.png', label: 'Developer Tools' },
+        { image: 'wallet.png', label: 'Open Wallet' },
+        { image: 'Terminal-icon.png', label: 'Enter the Matrix', action() { alert('go neo') } },
+      ];
+
+      var l = new Launcher(myItems);
+      l.render('#target')
+    </script>
+  </body>
+</html>
