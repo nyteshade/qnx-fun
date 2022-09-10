@@ -8,6 +8,8 @@
   </head>
   <body>
     <div id="target"></div>
+    <hr>
+    <div id="example"></div>
 
     <script type="application/javascript">
       var myItems = [
@@ -19,7 +21,19 @@
       ];
 
       var l = new Launcher(myItems);
-      l.render('#target')
+      l.render('#target');
+
+
+      var demoItems = [
+        { image: 'changefont.png', label: 'Change font', action(launcher) { l.style.labelFont = 'large monospace' } },
+        { image: 'theme.png', label: 'Pink theme, large icons', action() { l.applyTheme('pink', 'l') }},
+        { image: 'theme.png', label: 'Normal theme, small icons', action() { l.applyTheme(null, 's') }},
+      ]
+
+      var l2 = new Launcher(demoItems);
+      l2.render('#example')
+      l2.applyTheme(null, 'M')
+      l2.style.labelFont = '16pt script, "Brush Script MT"'
     </script>
   </body>
 </html>

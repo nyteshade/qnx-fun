@@ -204,6 +204,7 @@ class Launcher {
 
     this.style.setSize()
     this.style.highlightColor = '#cecfce';
+    this.style.labelFont = 'medium script,"Brush Script MT"';
 
     return this.target;
   }
