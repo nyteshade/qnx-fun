@@ -10,8 +10,19 @@
     <div id="target"></div>
     <hr>
     <div id="example"></div>
+    <hr>
+    <div id="progress">
+      <div class="progress-container">
+        <div class="progress-track"></div>
+        <div class="progress-bar"><div class="push-bar"></div></div>
+      </div>
+    </div>
 
     <script type="application/javascript">
+      // Note with progress, bar cannot exceed 99% width
+      // Note wit push bar, position cannot go below 0% (and must disappear)
+
+
       var myItems = [
         { image: 'floppy.png', label: 'Retro Gaming' },
         { image: 'camera.png', label: 'Video Chat with Someone' },
